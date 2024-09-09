@@ -1,13 +1,14 @@
-#!/usr/bin/env python3
-
-from sequences import print_fibonacci
-
 import io
 import sys
+from sequences import print_fibonacci
+
+
+
+
+
 
 
 class TestPrintFibonacci:
-    '''function print_fibonacci()'''
 
     def test_print_fibonacci_zero(self):
         '''prints empty list when length = 0'''
@@ -26,7 +27,7 @@ class TestPrintFibonacci:
         assert(captured_out.getvalue() == '[0]\n')
 
     def test_print_fibonacci_two(self):
-        '''prints 0\\n1 when length = 2'''
+        '''prints 0\n1 when length = 2'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
         print_fibonacci(2)
@@ -34,7 +35,7 @@ class TestPrintFibonacci:
         assert(captured_out.getvalue() == '[0, 1]\n')
 
     def test_print_fibonacci_ten(self):
-        '''prints 0\\n1\\n1\\n2\\n3\\n5\\n8\\n13\\n21\\n34 when length = 10'''
+        '''prints 0\n1\n1\n2\n3\n5\n8\n13\n21\n34 when length = 10'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
         print_fibonacci(10)
